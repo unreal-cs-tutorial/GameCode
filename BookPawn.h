@@ -12,6 +12,9 @@ class LEVEL1_API ABookPawn : public APawn
 	GENERATED_BODY()
 
 public:
+	//What shelf does the book belong on	
+	ShelfPawn *myShelf;
+	
 	// Sets default values for this pawn's properties
 	ABookPawn();
 
@@ -23,6 +26,13 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+	
+	//Checks if book is on the correct shelf
+	//Mostly for first level
+	virtual bool checkShelf();
+	
+	//Return 0 for shelf; 1 for pedestal; 2 for floor; 
+	virtual int whereInRoom();
 
 	
 	
