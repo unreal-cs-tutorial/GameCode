@@ -13,7 +13,9 @@ class LEVEL1_API ABookPawn : public APawn
 
 public:
 	//What shelf does the book belong on	
-	ShelfPawn *myShelf;
+	AShelfPawn *myShelf;
+	//What book am I?
+	int myBook;
 	
 	// Sets default values for this pawn's properties
 	ABookPawn();
