@@ -37,7 +37,7 @@ void ABookPawn::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 
 }
 
-bool checkShelf() //Probably don't need this. Have GameMode check if books are on the right shelves
+bool ABookPawn::checkShelf() //Probably don't need this. Have GameMode check if books are on the right shelves
 {
 	if (myShelf == myBook)
 	{
@@ -46,7 +46,7 @@ bool checkShelf() //Probably don't need this. Have GameMode check if books are o
 		return false;
 	}
 }
-int whereInRoom(){
+int ABookPawn::whereInRoom(){
 	int place = -1;
 	//Insert logic here
 	return place;
